@@ -1,9 +1,9 @@
 import { useState } from "react";
 
 const useCaseOptions = [
-  "OTP / Two-Factor Authentication",
-  "Transactional Alerts (order, shipping, appointment)",
-  "Support / Voice Calls",
+  "Account Verification (OTP, registration)",
+  "Security Alerts (login, account changes)",
+  "System Notifications (status, transactional)",
   "IP Geolocation & Fraud Detection",
   "Other",
 ];
@@ -26,8 +26,8 @@ export default function RequestAccess() {
           <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-10">
             <h1 className="mb-3 text-2xl font-bold text-emerald-800">Request Received</h1>
             <p className="text-sm leading-relaxed text-emerald-700">
-              Thank you for your interest in UniSynthe. Our team will review your application
-              and respond within one business day with API credentials or follow-up questions.
+              Thank you for your interest in UniSynthe. Our team will review your integration
+              request and respond within one business day with next steps or follow-up questions.
             </p>
             <p className="mt-4 text-sm text-emerald-600">
               If you need immediate assistance, email{" "}
@@ -46,7 +46,8 @@ export default function RequestAccess() {
       <div className="mx-auto max-w-lg px-6">
         <h1 className="mb-2 text-3xl font-bold text-slate-900">Request API Access</h1>
         <p className="mb-10 text-slate-600">
-          Tell us about your project. We review every application and typically respond within one business day.
+          Tell us about your application. Every integration is reviewed to ensure it aligns with
+          our platform's transactional and security-related use cases.
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-5">
@@ -85,16 +86,16 @@ export default function RequestAccess() {
 
           <div>
             <label htmlFor="volume" className="mb-1 block text-sm font-medium text-slate-700">
-              Estimated Monthly Volume <span className="text-slate-400">(optional)</span>
+              Estimated Monthly API Requests <span className="text-slate-400">(optional)</span>
             </label>
-            <input type="text" id="volume" className={inputClass} placeholder="e.g. 10,000 SMS/month" />
+            <input type="text" id="volume" className={inputClass} placeholder="e.g. 10,000 requests/month" />
           </div>
 
           <div>
             <label htmlFor="message" className="mb-1 block text-sm font-medium text-slate-700">
               Additional Details
             </label>
-            <textarea id="message" rows={4} className={inputClass} placeholder="Describe your integration needs..." />
+            <textarea id="message" rows={4} className={inputClass} placeholder="Describe your application and how you plan to use the API..." />
           </div>
 
           <button

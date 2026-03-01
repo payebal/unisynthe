@@ -4,7 +4,7 @@ const legalLinks = [
   { to: "/privacy", label: "Privacy" },
   { to: "/terms", label: "Terms" },
   { to: "/acceptable-use", label: "Acceptable Use" },
-  { to: "/messaging-policy", label: "Messaging Policy" },
+  { to: "/messaging-policy", label: "Notification Policy" },
   { to: "/contact", label: "Contact" },
 ];
 
@@ -15,7 +15,9 @@ export default function Footer() {
         <div className="flex flex-col items-center gap-4 text-sm text-slate-500 sm:flex-row sm:justify-between">
           <div>
             <p>&copy; 2026 UniSynthe Inc. All rights reserved.</p>
-            <p className="mt-1 text-xs text-slate-400">All services are consent-based. We do not support unsolicited messaging.</p>
+            <p className="mt-1 text-xs text-slate-400">
+              UniSynthe is an application infrastructure platform. It is not a bulk messaging or notification distribution service.
+            </p>
           </div>
           <div className="flex flex-wrap justify-center gap-x-4 gap-y-1">
             {legalLinks.map(({ to, label }) => (

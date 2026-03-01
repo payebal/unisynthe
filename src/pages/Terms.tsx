@@ -27,7 +27,7 @@ export default function Terms() {
       <H2>3. Permitted Use</H2>
       <p>You may use the Service to:</p>
       <Ul>
-        <li>Send transactional SMS and voice messages to end users who have provided explicit consent.</li>
+        <li>Deliver application-generated verification codes and security notifications to end users who have provided explicit consent.</li>
         <li>Perform IP geolocation lookups and fraud risk assessments.</li>
         <li>Integrate our APIs into your applications in accordance with our documentation.</li>
       </Ul>
@@ -35,14 +35,14 @@ export default function Terms() {
       <H2>4. Prohibited Use</H2>
       <p>
         You must comply with our <a href="/acceptable-use" className="text-primary hover:underline">Acceptable Use Policy</a> and{" "}
-        <a href="/messaging-policy" className="text-primary hover:underline">Messaging Policy</a>.
+        <a href="/messaging-policy" className="text-primary hover:underline">Notification Policy</a>.
         Prohibited activities include but are not limited to:
       </p>
       <Ul>
-        <li>Sending unsolicited messages (spam), phishing attempts, or fraudulent communications.</li>
+        <li>Using the platform for unsolicited, promotional, or user-initiated communications.</li>
+        <li>Reselling notification delivery or API access without prior written agreement.</li>
         <li>Using the Service for any illegal purpose.</li>
         <li>Exceeding rate limits or attempting to circumvent security controls.</li>
-        <li>Reselling API access without prior written agreement.</li>
       </Ul>
 
       <H2>5. Rate Limits & Quotas</H2>
@@ -61,7 +61,7 @@ export default function Terms() {
 
       <H2>7. Data Processing</H2>
       <p>
-        When you use our messaging or geolocation APIs, you may submit end-user data (phone numbers,
+        When you use our notification or geolocation APIs, you may submit end-user data (phone numbers,
         IP addresses). You are the data controller for this data. UniSynthe processes it on your
         behalf as a data processor, in accordance with our{" "}
         <a href="/privacy" className="text-primary hover:underline">Privacy Policy</a>.

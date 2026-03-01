@@ -16,49 +16,62 @@ export default function Privacy() {
         <a href="mailto:compliance@unisynthe.com" className="text-primary hover:underline">compliance@unisynthe.com</a>.
       </p>
 
-      <H2>2. Information We Collect</H2>
+      <H2>2. Service Functionality</H2>
+      <p>
+        UniSynthe processes limited technical and contact data strictly to provide application
+        functionality such as account verification, authentication events, and system notifications.
+        We do not operate a public notification network and do not allow users to originate
+        unrestricted communications.
+      </p>
+      <p>
+        All notification delivery is event-driven — triggered by integrated applications in
+        response to specific user actions (registration, login, password reset, security alerts).
+        The platform does not support standalone, user-initiated, or promotional notification delivery.
+      </p>
+
+      <H2>3. Information We Collect</H2>
       <Ul>
         <li><strong>Account information:</strong> Company name, contact name, email address, and website URL when you register or submit a request.</li>
-        <li><strong>API usage data:</strong> Request logs (timestamps, endpoints called, response codes, source IP addresses) for operational and billing purposes.</li>
+        <li><strong>API usage data:</strong> Request logs (timestamps, endpoints called, response codes, source IP addresses) for operational and security purposes.</li>
         <li><strong>IP addresses:</strong> Addresses submitted to the geolocation API by your application for resolution. We process these on your behalf.</li>
-        <li><strong>Phone numbers:</strong> Numbers provided by your application for SMS delivery or voice calls. We act as a processor; you are the controller of end-user data.</li>
+        <li><strong>Phone numbers:</strong> Numbers provided by your application for delivering verification codes and security notifications. We act as a processor; you are the controller of end-user data.</li>
         <li><strong>Contact form submissions:</strong> Name, email, and message content when you reach out via our website.</li>
       </Ul>
 
-      <H2>3. Legal Basis for Processing (GDPR)</H2>
+      <H2>4. Legal Basis for Processing (GDPR)</H2>
       <Ul>
         <li><strong>Contract performance:</strong> Processing account data and API requests to provide the Service.</li>
         <li><strong>Legitimate interest:</strong> Security monitoring, fraud prevention, abuse detection, and service improvement.</li>
-        <li><strong>Consent:</strong> Marketing communications (if any) are sent only with explicit opt-in.</li>
+        <li><strong>Consent:</strong> Contact form submissions and any optional communications.</li>
       </Ul>
 
-      <H2>4. How We Use Your Information</H2>
+      <H2>5. How We Use Your Information</H2>
       <Ul>
         <li>To provide, maintain, and improve the Service.</li>
-        <li>To process API requests (message delivery, geolocation lookups) on your behalf.</li>
+        <li>To process API requests (application notification delivery, geolocation lookups) on your behalf.</li>
         <li>To respond to support inquiries and communicate about your account.</li>
         <li>To detect and prevent abuse, fraud, and violations of our Acceptable Use Policy.</li>
         <li>To comply with legal obligations and enforce our terms.</li>
       </Ul>
 
-      <H2>5. Subprocessors</H2>
+      <H2>6. Subprocessors</H2>
       <p>We use the following third-party services to deliver core functionality:</p>
       <Ul>
-        <li><strong>Telnyx LLC</strong> — SMS delivery, voice calls, and phone number provisioning. Telnyx processes phone numbers and message content on our behalf. <a href="https://telnyx.com/privacy-policy" className="text-primary hover:underline" target="_blank" rel="noopener">Telnyx Privacy Policy</a>.</li>
+        <li><strong>Telnyx LLC</strong> — Notification delivery infrastructure for verification codes and security alerts. Telnyx processes phone numbers and notification content on our behalf. <a href="https://telnyx.com/privacy-policy" className="text-primary hover:underline" target="_blank" rel="noopener">Telnyx Privacy Policy</a>.</li>
         <li><strong>MaxMind Inc.</strong> — IP geolocation database and fraud detection services. MaxMind processes IP addresses submitted through our API. <a href="https://www.maxmind.com/en/privacy-policy" className="text-primary hover:underline" target="_blank" rel="noopener">MaxMind Privacy Policy</a>.</li>
       </Ul>
       <p>We require all subprocessors to maintain appropriate security measures and process data only as instructed.</p>
 
-      <H2>6. Data Retention</H2>
+      <H2>7. Data Retention</H2>
       <Ul>
         <li><strong>Account data:</strong> Retained for the duration of your account plus 12 months after termination.</li>
         <li><strong>API request logs:</strong> Retained for 90 days for debugging and abuse detection, then deleted.</li>
-        <li><strong>Message content:</strong> Not stored by UniSynthe after successful delivery. Delivery metadata (timestamps, status codes) retained for 90 days.</li>
+        <li><strong>Notification content:</strong> Not stored by UniSynthe after successful delivery. Delivery metadata (timestamps, status codes) retained for 90 days.</li>
         <li><strong>Contact form submissions:</strong> Retained for 24 months, then deleted.</li>
         <li><strong>IP geolocation queries:</strong> Query logs retained for 30 days. IP addresses are not linked to identifiable individuals by UniSynthe.</li>
       </Ul>
 
-      <H2>7. Security Measures</H2>
+      <H2>8. Security Measures</H2>
       <Ul>
         <li>TLS 1.2+ encryption for all data in transit.</li>
         <li>AES-256 encryption for sensitive data at rest (credentials, API keys).</li>
@@ -68,7 +81,7 @@ export default function Privacy() {
         <li>Regular security reviews and dependency audits.</li>
       </Ul>
 
-      <H2>8. International Data Transfers</H2>
+      <H2>9. International Data Transfers</H2>
       <p>
         Our infrastructure is hosted in the United States. If you are located outside the US,
         your data will be transferred to and processed in the US. We rely on Standard Contractual
@@ -76,7 +89,7 @@ export default function Privacy() {
         international transfers.
       </p>
 
-      <H2>9. Your Rights</H2>
+      <H2>10. Your Rights</H2>
       <p>Depending on your jurisdiction, you may have the right to:</p>
       <Ul>
         <li>Access the personal data we hold about you.</li>
@@ -92,14 +105,14 @@ export default function Privacy() {
         We will respond within 30 days.
       </p>
 
-      <H2>10. SMS Messaging</H2>
+      <H2>11. Application Notifications</H2>
       <p>
-        If you or your end users receive SMS messages through our platform: message and data
-        rates may apply. Reply STOP to opt out of future messages. Reply HELP for assistance.
-        We only send messages when explicit consent has been provided by the end user.
+        If you or your end users receive notifications through our platform: standard data
+        rates may apply. Reply STOP to opt out of future notifications. Reply HELP for assistance.
+        Notifications are delivered only when triggered by an application event with documented end-user consent.
       </p>
 
-      <H2>11. Changes to This Policy</H2>
+      <H2>12. Changes to This Policy</H2>
       <p>
         We may update this Privacy Policy from time to time. Material changes will be communicated
         via email to account holders. Continued use of the Service after changes constitutes acceptance.

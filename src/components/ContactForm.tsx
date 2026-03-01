@@ -1,9 +1,9 @@
 import { useState } from "react";
 
 const useCaseOptions = [
-  "OTP / Two-Factor Authentication",
-  "Transactional Alerts",
-  "Voice / Support Calls",
+  "Account Verification",
+  "Security Alerts",
+  "System Notifications",
   "IP Geolocation & Fraud Detection",
   "General Inquiry",
   "Other",
@@ -50,7 +50,7 @@ export default function ContactForm() {
     return (
       <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-8 text-center">
         <p className="text-lg font-medium text-emerald-800">Thank you!</p>
-        <p className="mt-1 text-sm text-emerald-600">We'll get back to you within one business day.</p>
+        <p className="mt-1 text-sm text-emerald-600">We'll review your request and respond within one business day.</p>
       </div>
     );
   }
@@ -79,14 +79,14 @@ export default function ContactForm() {
 
       <div>
         <label htmlFor="volume" className="mb-1 block text-sm font-medium text-slate-700">
-          Estimated Monthly Volume <span className="text-slate-400">(optional)</span>
+          Estimated Monthly API Requests <span className="text-slate-400">(optional)</span>
         </label>
-        <input type="text" id="volume" value={volume} onChange={(e) => setVolume(e.target.value)} className={inputClass} placeholder="e.g. 5,000 SMS/month" />
+        <input type="text" id="volume" value={volume} onChange={(e) => setVolume(e.target.value)} className={inputClass} placeholder="e.g. 5,000 requests/month" />
       </div>
 
       <div>
         <label htmlFor="message" className="mb-1 block text-sm font-medium text-slate-700">Message</label>
-        <textarea id="message" value={message} onChange={(e) => setMessage(e.target.value)} required rows={4} className={inputClass} placeholder="How can we help?" />
+        <textarea id="message" value={message} onChange={(e) => setMessage(e.target.value)} required rows={4} className={inputClass} placeholder="Describe your application and integration needs..." />
       </div>
 
       {status === "error" && (
