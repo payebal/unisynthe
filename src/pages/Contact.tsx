@@ -1,5 +1,6 @@
-import { Mail, MapPin } from "lucide-react";
+import { Mail, MapPin, ShieldCheck, AlertTriangle } from "lucide-react";
 import ContactForm from "../components/ContactForm";
+import InfoCard from "../components/InfoCard";
 
 export default function Contact() {
   return (
@@ -10,27 +11,40 @@ export default function Contact() {
         <div className="grid gap-12 md:grid-cols-2">
           <ContactForm />
 
-          <div className="space-y-6">
-            <div className="flex items-start gap-3">
-              <Mail className="mt-0.5 h-5 w-5 text-primary" />
-              <div>
-                <p className="text-sm font-medium text-slate-900">Email</p>
-                <a
+          <div className="space-y-8">
+            <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+              <h2 className="mb-4 font-semibold text-slate-900">Contact Channels</h2>
+              <div className="space-y-4">
+                <InfoCard
+                  icon={<Mail className="h-5 w-5" />}
+                  label="General Support"
+                  value="support@unisynthe.com"
                   href="mailto:support@unisynthe.com"
-                  className="text-sm text-slate-600 transition-colors hover:text-primary"
-                >
-                  support@unisynthe.com
-                </a>
+                />
+                <InfoCard
+                  icon={<ShieldCheck className="h-5 w-5" />}
+                  label="Compliance & Legal"
+                  value="compliance@unisynthe.com"
+                  href="mailto:compliance@unisynthe.com"
+                />
+                <InfoCard
+                  icon={<AlertTriangle className="h-5 w-5" />}
+                  label="Abuse Reports"
+                  value="abuse@unisynthe.com"
+                  href="mailto:abuse@unisynthe.com"
+                />
+                <InfoCard
+                  icon={<MapPin className="h-5 w-5" />}
+                  label="Location"
+                  value="Remote-first team, San Francisco Bay Area"
+                />
               </div>
             </div>
 
-            <div className="flex items-start gap-3">
-              <MapPin className="mt-0.5 h-5 w-5 text-primary" />
-              <div>
-                <p className="text-sm font-medium text-slate-900">Location</p>
-                <p className="text-sm text-slate-600">Remote-first team, San Francisco Bay Area</p>
-              </div>
-            </div>
+            <p className="text-sm text-slate-500">
+              Typical response time: within one business day.
+              For abuse or compliance issues, we respond within 24 hours.
+            </p>
           </div>
         </div>
       </div>

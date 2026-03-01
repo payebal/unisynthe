@@ -6,7 +6,7 @@ const links = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
-  { to: "/privacy", label: "Privacy" },
+  { to: "/request-access", label: "API Access" },
 ];
 
 export default function Header() {
