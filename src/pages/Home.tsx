@@ -176,8 +176,8 @@ export default function Home() {
           title="Sample Event Log"
           subtitle="Example event records from a production-style application workflow."
         />
-        <div className="mx-auto max-w-5xl overflow-hidden rounded-2xl border border-slate-200 bg-white">
-          <div className="grid grid-cols-6 border-b border-slate-200 bg-slate-50 px-4 py-3 text-xs font-semibold uppercase tracking-wide text-slate-500">
+        <div className="mx-auto max-w-5xl overflow-hidden rounded-2xl border border-slate-200 bg-white text-sm">
+          <div className="hidden sm:grid sm:grid-cols-[2fr_2fr_1fr_1fr_1fr_2fr] border-b border-slate-200 bg-slate-50 px-5 py-3 text-xs font-semibold uppercase tracking-wide text-slate-500">
             <span>Event</span>
             <span>Application</span>
             <span>User ID</span>
@@ -185,30 +185,23 @@ export default function Home() {
             <span>Status</span>
             <span>Timestamp (UTC)</span>
           </div>
-          <div className="grid grid-cols-6 border-b border-slate-100 px-4 py-3 text-sm text-slate-700">
-            <span className="font-medium">login_new_device</span>
-            <span>project_management_dashboard</span>
-            <span>84219</span>
-            <span>auth</span>
-            <span className="text-emerald-700">processed</span>
-            <span>2026-02-18 14:03:22</span>
-          </div>
-          <div className="grid grid-cols-6 border-b border-slate-100 px-4 py-3 text-sm text-slate-700">
-            <span className="font-medium">password_reset_requested</span>
-            <span>customer_account_portal</span>
-            <span>33107</span>
-            <span>account</span>
-            <span className="text-emerald-700">processed</span>
-            <span>2026-02-18 14:11:09</span>
-          </div>
-          <div className="grid grid-cols-6 px-4 py-3 text-sm text-slate-700">
-            <span className="font-medium">account_email_changed</span>
-            <span>internal_admin_console</span>
-            <span>55902</span>
-            <span>account</span>
-            <span className="text-amber-700">queued</span>
-            <span>2026-02-18 14:14:37</span>
-          </div>
+          {[
+            { event: "login_new_device", app: "proj_mgmt_dashboard", uid: "84219", type: "auth", status: "processed", ts: "2026-02-18 14:03:22", color: "text-emerald-700" },
+            { event: "password_reset", app: "customer_portal", uid: "33107", type: "account", status: "processed", ts: "2026-02-18 14:11:09", color: "text-emerald-700" },
+            { event: "email_changed", app: "internal_admin", uid: "55902", type: "account", status: "queued", ts: "2026-02-18 14:14:37", color: "text-amber-700" },
+          ].map((row, i) => (
+            <div
+              key={i}
+              className={`grid gap-x-2 px-5 py-3 text-slate-700 sm:grid-cols-[2fr_2fr_1fr_1fr_1fr_2fr] ${i < 2 ? "border-b border-slate-100" : ""}`}
+            >
+              <span className="font-medium truncate">{row.event}</span>
+              <span className="truncate">{row.app}</span>
+              <span>{row.uid}</span>
+              <span>{row.type}</span>
+              <span className={row.color}>{row.status}</span>
+              <span className="tabular-nums">{row.ts}</span>
+            </div>
+          ))}
         </div>
       </section>
 
