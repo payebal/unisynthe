@@ -9,6 +9,8 @@ import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import AcceptableUse from "./pages/AcceptableUse";
 import MessagingPolicy from "./pages/MessagingPolicy";
+import Developers from "./pages/Developers";
+import Plans from "./pages/Plans";
 
 export default function App() {
   return (
@@ -20,6 +22,8 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/request-access" element={<RequestAccess />} />
+          <Route path="/developers" element={<Developers />} />
+          <Route path="/plans" element={<Plans />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/acceptable-use" element={<AcceptableUse />} />

@@ -1,10 +1,10 @@
 import { useState } from "react";
 
 const useCaseOptions = [
-  "Account Verification (OTP, registration)",
+  "User Authentication (login, account recovery)",
   "Security Alerts (login, account changes)",
   "System Notifications (status, transactional)",
-  "IP Geolocation & Fraud Detection",
+  "IP Geolocation & Login Risk Signals",
   "Other",
 ];
 
@@ -24,7 +24,7 @@ export default function RequestAccess() {
       <section className="py-20">
         <div className="mx-auto max-w-lg px-6 text-center">
           <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-10">
-            <h1 className="mb-3 text-2xl font-bold text-emerald-800">Request Received</h1>
+            <h1 className="mb-3 text-2xl font-bold text-emerald-800">Application Received</h1>
             <p className="text-sm leading-relaxed text-emerald-700">
               Thank you for your interest in UniSynthe. Our team will review your integration
               request and respond within one business day with next steps or follow-up questions.
@@ -44,10 +44,12 @@ export default function RequestAccess() {
   return (
     <section className="py-20">
       <div className="mx-auto max-w-lg px-6">
-        <h1 className="mb-2 text-3xl font-bold text-slate-900">Request API Access</h1>
+        <h1 className="mb-2 text-3xl font-bold text-slate-900">Apply for Integration</h1>
         <p className="mb-10 text-slate-600">
-          Tell us about your application. Every integration is reviewed to ensure it aligns with
-          our platform's transactional and security-related use cases.
+          Tell us about your application and we'll get you set up.
+        </p>
+        <p className="mb-6 rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-600">
+          Access is issued for a specific application integration after review.
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-5">
@@ -102,7 +104,7 @@ export default function RequestAccess() {
             type="submit"
             className="w-full rounded-lg bg-primary px-6 py-2.5 text-sm font-medium text-white transition-colors hover:bg-primary-dark"
           >
-            Submit Request
+            Submit Application
           </button>
         </form>
       </div>

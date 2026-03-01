@@ -4,9 +4,11 @@ import { Menu, X } from "lucide-react";
 
 const links = [
   { to: "/", label: "Home" },
+  { to: "/developers", label: "Developers" },
+  { to: "/plans", label: "Plans" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
-  { to: "/request-access", label: "API Access" },
+  { to: "/request-access", label: "Integration" },
 ];
 
 export default function Header() {

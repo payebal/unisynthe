@@ -1,10 +1,10 @@
 import { useState } from "react";
 
 const useCaseOptions = [
-  "Account Verification",
+  "User Authentication",
   "Security Alerts",
-  "System Notifications",
-  "IP Geolocation & Fraud Detection",
+  "System Events",
+  "IP Geolocation & Risk Signals",
   "General Inquiry",
   "Other",
 ];

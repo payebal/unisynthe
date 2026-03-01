@@ -11,10 +11,6 @@ export default function Contact() {
         <div className="grid gap-12 md:grid-cols-2">
           <div>
             <ContactForm />
-            <p className="mt-6 rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-xs leading-relaxed text-slate-500">
-              Integration requests are manually reviewed.
-              We only support transactional and security-related application use cases.
-            </p>
           </div>
 
           <div className="space-y-8">

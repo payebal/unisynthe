@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 
 const legalLinks = [
+  { to: "/developers", label: "Developers" },
+  { to: "/plans", label: "Plans" },
   { to: "/privacy", label: "Privacy" },
   { to: "/terms", label: "Terms" },
   { to: "/acceptable-use", label: "Acceptable Use" },
@@ -16,7 +18,7 @@ export default function Footer() {
           <div>
             <p>&copy; 2026 UniSynthe Inc. All rights reserved.</p>
             <p className="mt-1 text-xs text-slate-400">
-              UniSynthe is an application infrastructure platform. It is not a bulk messaging or notification distribution service.
+              Event-driven developer infrastructure for application security and notifications.
             </p>
           </div>
           <div className="flex flex-wrap justify-center gap-x-4 gap-y-1">

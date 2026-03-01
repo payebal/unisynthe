@@ -16,25 +16,38 @@ export default function Privacy() {
         <a href="mailto:compliance@unisynthe.com" className="text-primary hover:underline">compliance@unisynthe.com</a>.
       </p>
 
-      <H2>2. Service Functionality</H2>
+      <H2>2. Service Data Processing</H2>
       <p>
-        UniSynthe processes limited technical and contact data strictly to provide application
-        functionality such as account verification, authentication events, and system notifications.
-        We do not operate a public notification network and do not allow users to originate
-        unrestricted communications.
+        UniSynthe operates as application infrastructure used by software systems. We do not
+        interact directly with end users of our customers&apos; applications.
       </p>
       <p>
-        All notification delivery is event-driven — triggered by integrated applications in
-        response to specific user actions (registration, login, password reset, security alerts).
-        The platform does not support standalone, user-initiated, or promotional notification delivery.
+        The platform processes structured application events provided by integrating applications,
+        such as authentication attempts, account recovery requests, and system-generated
+        notifications.
+      </p>
+      <p>
+        Technical identifiers (such as IP address or device metadata) may be transmitted to
+        UniSynthe by the integrating application as part of these events. UniSynthe processes
+        this information solely to perform the requested platform function and return the result
+        to the originating application.
+      </p>
+      <p>
+        For certain application events, the event workflow may include a user-facing notification
+        (such as a login alert or account recovery notice). In such cases, contact identifiers
+        (such as a phone number or email address) are provided by the integrating application
+        as part of the event payload and used solely to complete the requested event.
+      </p>
+      <p>
+        UniSynthe does not independently collect user data from the public, track individuals
+        across services, or build user profiles.
       </p>
 
       <H2>3. Information We Collect</H2>
       <Ul>
-        <li><strong>Account information:</strong> Company name, contact name, email address, and website URL when you register or submit a request.</li>
+        <li><strong>Account information:</strong> Company name, contact name, email address, and website URL provided by API customers.</li>
+        <li><strong>Application event data:</strong> Structured events sent by integrating applications; event payloads may include technical identifiers such as IP address or device metadata.</li>
         <li><strong>API usage data:</strong> Request logs (timestamps, endpoints called, response codes, source IP addresses) for operational and security purposes.</li>
-        <li><strong>IP addresses:</strong> Addresses submitted to the geolocation API by your application for resolution. We process these on your behalf.</li>
-        <li><strong>Phone numbers:</strong> Numbers provided by your application for delivering verification codes and security notifications. We act as a processor; you are the controller of end-user data.</li>
         <li><strong>Contact form submissions:</strong> Name, email, and message content when you reach out via our website.</li>
       </Ul>
 
@@ -48,7 +61,7 @@ export default function Privacy() {
       <H2>5. How We Use Your Information</H2>
       <Ul>
         <li>To provide, maintain, and improve the Service.</li>
-        <li>To process API requests (application notification delivery, geolocation lookups) on your behalf.</li>
+        <li>To process API requests (application event processing and risk signal lookups) on your behalf.</li>
         <li>To respond to support inquiries and communicate about your account.</li>
         <li>To detect and prevent abuse, fraud, and violations of our Acceptable Use Policy.</li>
         <li>To comply with legal obligations and enforce our terms.</li>
@@ -57,18 +70,17 @@ export default function Privacy() {
       <H2>6. Subprocessors</H2>
       <p>We use the following third-party services to deliver core functionality:</p>
       <Ul>
-        <li><strong>Telnyx LLC</strong> — Notification delivery infrastructure for verification codes and security alerts. Telnyx processes phone numbers and notification content on our behalf. <a href="https://telnyx.com/privacy-policy" className="text-primary hover:underline" target="_blank" rel="noopener">Telnyx Privacy Policy</a>.</li>
-        <li><strong>MaxMind Inc.</strong> — IP geolocation database and fraud detection services. MaxMind processes IP addresses submitted through our API. <a href="https://www.maxmind.com/en/privacy-policy" className="text-primary hover:underline" target="_blank" rel="noopener">MaxMind Privacy Policy</a>.</li>
+        <li><strong>Telnyx LLC</strong> — Communications infrastructure provider. When an application event includes a user-facing notification, Telnyx may be used to complete that notification on our behalf. <a href="https://telnyx.com/privacy-policy" className="text-primary hover:underline" target="_blank" rel="noopener">Telnyx Privacy Policy</a>.</li>
+        <li><strong>MaxMind Inc.</strong> — IP geolocation and risk signal services. MaxMind processes IP addresses submitted as part of application events through our API. <a href="https://www.maxmind.com/en/privacy-policy" className="text-primary hover:underline" target="_blank" rel="noopener">MaxMind Privacy Policy</a>.</li>
       </Ul>
       <p>We require all subprocessors to maintain appropriate security measures and process data only as instructed.</p>
 
       <H2>7. Data Retention</H2>
       <Ul>
-        <li><strong>Account data:</strong> Retained for the duration of your account plus 12 months after termination.</li>
-        <li><strong>API request logs:</strong> Retained for 90 days for debugging and abuse detection, then deleted.</li>
-        <li><strong>Notification content:</strong> Not stored by UniSynthe after successful delivery. Delivery metadata (timestamps, status codes) retained for 90 days.</li>
+        <li><strong>Event metadata:</strong> Retained for 30 days.</li>
+        <li><strong>Security logs:</strong> Retained for 90 days.</li>
+        <li><strong>Billing and account records:</strong> Retained for 1 year.</li>
         <li><strong>Contact form submissions:</strong> Retained for 24 months, then deleted.</li>
-        <li><strong>IP geolocation queries:</strong> Query logs retained for 30 days. IP addresses are not linked to identifiable individuals by UniSynthe.</li>
       </Ul>
 
       <H2>8. Security Measures</H2>
@@ -100,16 +112,25 @@ export default function Privacy() {
         <li>Withdraw consent at any time (where processing is based on consent).</li>
       </Ul>
       <p>
+        If you are an end user of an application that uses UniSynthe, please contact that
+        application directly regarding your personal data. UniSynthe acts as a data processor
+        on behalf of the application operator (the data controller) and processes end-user data
+        only as instructed by the integrating application. UniSynthe assists data controllers
+        with deletion and access requests where applicable under our data processing agreements.
+      </p>
+      <p>
         To exercise any of these rights, contact{" "}
         <a href="mailto:compliance@unisynthe.com" className="text-primary hover:underline">compliance@unisynthe.com</a>.
         We will respond within 30 days.
       </p>
 
-      <H2>11. Application Notifications</H2>
+      <H2>11. Application Event Processing</H2>
       <p>
-        If you or your end users receive notifications through our platform: standard data
-        rates may apply. Reply STOP to opt out of future notifications. Reply HELP for assistance.
-        Notifications are delivered only when triggered by an application event with documented end-user consent.
+        UniSynthe processes application events on behalf of integrating applications.
+        Event processing is initiated only by the integrating application and is governed
+        by the terms of the applicable integration agreement. End-user opt-out and
+        preference management are addressed in our{" "}
+        <a href="/messaging-policy" className="text-primary hover:underline">Notification Policy</a>.
       </p>
 
       <H2>12. Changes to This Policy</H2>
