@@ -1,0 +1,14 @@
+[Unit]
+Description=UniSynthe Contact Form API
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/unisynthe
+ExecStart=/usr/bin/python3 /home/ubuntu/unisynthe/contact-api.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
