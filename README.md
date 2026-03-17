@@ -66,7 +66,7 @@ Output in `dist/`.
    sudo certbot --nginx -d unisynthe.com -d www.unisynthe.com
    ```
 
-4. Point DNS A records to 13.60.35.70
+4. Point DNS A records to 44.227.57.43
 
 ## Formspree
 
